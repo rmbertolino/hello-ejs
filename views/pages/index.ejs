@@ -1,0 +1,19 @@
+<h3>Page Index</h3>
+
+<h1>Hello World</h1>
+<h3><%= data.message %></h3>
+<img src="<%= data.image_url %>" alt="">
+<br>
+<a href="<%= data.api_url %>">Ir a endpoint</a>
+
+<ul>
+    <% data.people.forEach(element => { %>
+        <li><%= element.name %></li>
+    <% }) %>
+</ul>
+
+<% if (typeof user !== 'undefined') { %>
+    <h1>Bienvenido <%= user.name %></h1>
+<% } else { %>
+    <h1>Bienvenido Invitado</h1>
+<% } %>
